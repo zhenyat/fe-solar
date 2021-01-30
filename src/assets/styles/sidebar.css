@@ -1,0 +1,21 @@
+aside {
+  width: 35%;
+  /* padding-right: .5rem; */
+  /* margin-right: .5rem; */
+  /* float: right; */
+  /* box-shadow: inset 5px 0 5px -5px #29627e; */
+  font-style: italic;
+  color: brown;
+  text-align: center;
+  background-color: lightyellow;
+}
+
+aside > p {
+  margin: .5rem;
+}
+
+.rowC{display:flex; flex-direction:row;}
+
+@media (max-width: 500px) {
+  #disappearing {display: none;}
+}

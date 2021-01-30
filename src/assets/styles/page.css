@@ -1,0 +1,9 @@
+.page {
+  display: flex;
+  /* min-height: 100vh;  vh is buggy for older mobile Safari */
+  height: 100%; /* To stick Footer */
+  flex-direction: column;
+}
+.page-content {
+  flex: 1;  /* To stick Footer */
+}
