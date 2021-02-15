@@ -6,7 +6,7 @@ const HeaderBanner = (props) => {
       <div className="container">
         <div className="banner-text">
           <div className="banner-heading">
-            Glad to see you here !
+            {props.title}
           </div>
         </div>
       </div>

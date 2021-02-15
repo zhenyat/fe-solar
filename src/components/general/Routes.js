@@ -1,8 +1,10 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Layout  from 'components/demo/Layout'
-// import Samples from 'components/demo/Samples'
+import SamplesPage from 'components/demo/samples/SamplesPage'
 import Page from 'components/demo/Page'
+
+import CategoriesIndex from 'components/categories/CategoriesIndex'
 
 // import Category   from 'components/categories/Show'
 // import Home       from 'components/pages/Home';
@@ -20,7 +22,7 @@ const Routes = () => {
         {/* <AppHeader /> */}
       </Route>
       <Route exact path="/">
-        {/* <Home /> */}
+        <CategoriesIndex />
       </Route>
       <Route exact path="/categories/:id">
         {/* <Category/> */}
@@ -50,9 +52,9 @@ const Routes = () => {
       <Route exact path="/demo/layout">
         <Layout />
       </Route>
-      {/* <Route exact path="/demo/samples">
-        <Samples />
-      </Route> */}
+      <Route exact path="/demo/samples">
+        <SamplesPage />
+      </Route>
       <Route path="/categories">
         {/* <Categories /> */}
       </Route>

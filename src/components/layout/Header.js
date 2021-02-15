@@ -6,7 +6,7 @@ const Header = (props) => {
   return (
     <div>
       <HeaderNavBar />
-      <HeaderBanner />
+      <HeaderBanner title={props.title} />
     </div>
   )
 }
