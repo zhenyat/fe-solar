@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import * as Constants from 'constants/globals';
-import Head                 from 'components/general/Head'
+import Head                 from 'components/layout/Head'
 import Header               from 'components/layout/Header'
 import SamplesPageMain      from 'components/demo/samples/SamplesPageMain'
 import Footer from 'components/layout/Footer'
@@ -20,7 +20,7 @@ class SamplesPage extends React.Component {
       url: Constants.API_URL + '/samples'
     })
     .then(response => {
-      // console.log("ZT! Demo :", response.data)
+      console.log("ZT! response.data:", response.data)
       this.setState({ samples: response.data })
     })
 
@@ -33,7 +33,7 @@ class SamplesPage extends React.Component {
         <div className="App Site">
           <div className="Site-content">
             <div className="App-header">
-              <Header />
+              <Header title="Образцы"/>
             </div>
             <div className="App-main">
               <div className="main_background">

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import Card      from 'react-bootstrap/Card'
 import CardDeck  from 'react-bootstrap/CardDeck'
 
-const CategoryBrief = props => (
+const CategoryCard = props => (
   <Card.Link href={`/categories/${props.category.id}`} style={{ display: "flex", flexDirection: 'row', flex: '1', padding: "0.5rem"}}  >
     <CardDeck className="mx-auto text-center" >
       <Card bg="success" text="white" style={{ width: '10rem' }}>
@@ -22,10 +22,10 @@ const CategoryBrief = props => (
   </Card.Link>
 )
 
-CategoryBrief.propTypes = {
+CategoryCard.propTypes = {
   category: PropTypes.shape({
     title:    PropTypes.string.isRequired,
-    quantity: PropTypes.number.isRequired,
+    // quantity: PropTypes.number.isRequired,
   })
 }
-export default CategoryBrief
+export default CategoryCard

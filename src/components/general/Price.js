@@ -3,7 +3,7 @@ import Button    from 'react-bootstrap/Button'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faRubleSign } from "@fortawesome/free-solid-svg-icons"
 
-const Price = (props) => {
+const Price = props => {
   return (
       <Button variant="light" size="sm" className='mt-3 mb-2'>
         <strong>{parseFloat(props.price).toFixed(2)}{' '}</strong>

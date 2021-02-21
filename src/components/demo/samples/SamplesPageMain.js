@@ -1,6 +1,6 @@
 import Container   from 'react-bootstrap/Container'
 import SamplesList from 'components/demo/samples/SamplesList'
-import NewsBox     from 'components/layout/NewsBox'
+import NewsBox     from 'components/layout/SideBox'
 
 export default function SamplesPageMain(props) {
   return (

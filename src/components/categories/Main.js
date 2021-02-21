@@ -1,6 +1,6 @@
 import Container      from 'react-bootstrap/Container'
 import CategoriesList from 'components/categories/CategoriesList'
-import NewsBox        from 'components/layout/NewsBox'
+import NewsBox        from 'components/layout/SideBox'
 
 export default function Main(props) {
   return (

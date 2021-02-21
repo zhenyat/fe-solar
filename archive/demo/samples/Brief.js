@@ -7,6 +7,7 @@ import CardDeck from 'react-bootstrap/CardDeck'
 
 import Cart from 'components/general/Cart'
 import Price from 'components/general/Price'
+// import Currency from 'component/general/Currency'
 
 const Brief = props => (
   <CardDeck
@@ -35,6 +36,7 @@ const Brief = props => (
       </Card.Body>
       <Card.Footer>
         <Price price={props.sample.price} />
+        {/* <Currency value={props.sample.price} /> */}
         &nbsp;&nbsp;
         <Cart />
       </Card.Footer>

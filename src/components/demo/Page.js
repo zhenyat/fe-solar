@@ -1,7 +1,7 @@
 import React from 'react'
 import * as Constants   from 'constants/globals';
 import Table  from 'react-bootstrap/Table';
-import Head   from 'components/general/Head'
+import Head   from 'components/layout/Head'
 import Source from 'components/general/Source'
 
 const Page = (props) => {

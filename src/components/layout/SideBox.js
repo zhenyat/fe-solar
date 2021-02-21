@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NewsBox = () => {
+const SideBox = () => {
   return (
     <aside id="disappearing">
       <h4>Aside News</h4>
@@ -19,4 +19,4 @@ const NewsBox = () => {
     </aside>
   )
 }
-export default NewsBox
+export default SideBox

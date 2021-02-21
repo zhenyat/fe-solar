@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Head                 from 'components/general/Head'
+import Head                 from 'components/layout/Head'
 import Header               from 'components/layout/Header'
 import Main                 from 'components/layout/Main'
 import Footer               from 'components/layout/Footer'

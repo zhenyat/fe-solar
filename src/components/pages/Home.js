@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import * as Constants from 'constants/globals';
-import Head   from 'components/general/Head'
+import Head   from 'components/layout/Head'
 import Header from 'components/layout/Header'
 import Main   from 'components/demo/samples/SamplesPageMain'
 import Footer from 'components/layout/Footer'

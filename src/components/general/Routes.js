@@ -1,10 +1,12 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Layout  from 'components/demo/Layout'
-import SamplesPage from 'components/demo/samples/SamplesPage'
-import Page from 'components/demo/Page'
+import Layout      from 'components/demo/Layout'
+// import ItemsPage   from 'components/items/ItemsPage'
+import Sample      from 'components/demo/samples/Sample'
+import Page        from 'components/demo/Page'
 
 import CategoriesIndex from 'components/categories/CategoriesIndex'
+import SamplesPage from 'components/demo/samples/SamplesPage'
 
 // import Category   from 'components/categories/Show'
 // import Home       from 'components/pages/Home';
@@ -22,6 +24,7 @@ const Routes = () => {
         {/* <AppHeader /> */}
       </Route>
       <Route exact path="/">
+        {/* <ItemsPage item='categories' /> */}
         <CategoriesIndex />
       </Route>
       <Route exact path="/categories/:id">
@@ -54,6 +57,10 @@ const Routes = () => {
       </Route>
       <Route exact path="/demo/samples">
         <SamplesPage />
+        {/* <ItemsPage items="samples" /> */}
+      </Route>
+      <Route exact path="/demo/samples/:id">
+        <Sample />
       </Route>
       <Route path="/categories">
         {/* <Categories /> */}

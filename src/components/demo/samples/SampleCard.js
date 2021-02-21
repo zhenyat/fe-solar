@@ -4,7 +4,7 @@ import CardDeck  from 'react-bootstrap/CardDeck'
 import Cart      from 'components/general/Cart'
 import Price     from 'components/general/Price'
 
-const SampleBrief = props => (
+const SampleCard = props => (
   <Card.Link href={`/samples/${props.sample.id}`} style={{ display: "flex", flexDirection: 'row', flex: '1', padding: "0.5rem"}}  >
     <CardDeck className="mx-auto text-center" >
       <Card bg="success" text="white" style={{ width: '10rem' }}>
@@ -26,11 +26,11 @@ const SampleBrief = props => (
   </Card.Link>
 )
 
-SampleBrief.propTypes = {
+SampleCard.propTypes = {
   sample: PropTypes.shape({
     title:    PropTypes.string.isRequired,
     price:    PropTypes.string.isRequired,
     quantity: PropTypes.number.isRequired,
   })
 }
-export default SampleBrief
+export default SampleCard

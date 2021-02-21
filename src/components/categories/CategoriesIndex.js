@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import * as Constants from 'constants/globals';
-import Head   from 'components/general/Head'
+import Head   from 'components/layout/Head'
 import Header from 'components/layout/Header'
 import Main   from 'components/categories/Main'
 import Footer from 'components/layout/Footer'
@@ -29,12 +29,12 @@ class CategoriesIndex extends React.Component {
   render() {
     return (
       <>
-        <Head />
+        <Head seo_title="zt-categories"/>
         <div className="App Site">
           <div className="Site-content">
             <div className="App-header">
               <Header title="Категории товаров" />
-            </div>``
+            </div>
             <div className="App-main">
               <div className="main_background">
                 <Main categories={this.state.categories} />
