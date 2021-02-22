@@ -5,7 +5,7 @@ import Cart      from 'components/general/Cart'
 import Price     from 'components/general/Price'
 
 const SampleCard = props => (
-  <Card.Link href={`/samples/${props.sample.id}`} style={{ display: "flex", flexDirection: 'row', flex: '1', padding: "0.5rem"}} >
+  <Card.Link href={`/demo/samples/${props.sample.id}`} style={{ display: "flex", flexDirection: 'row', flex: '1', padding: "0.5rem"}} >
     <CardDeck className="mx-auto text-center" >
       <Card bg="success" text="white" style={{ width: '11rem' }}>
         <Card.Header>

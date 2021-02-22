@@ -1,58 +1,24 @@
 import React from 'react'
-import axios from 'axios'
-import * as Constants from 'constants/globals';
-import Head           from 'components/layout/Head'
-import Header         from 'components/layout/Header'
-import Footer from 'components/layout/Footer'
-import Details from 'components/demo/samples/Details'
+// import PropTypes from 'prop-types'
+import Image from 'react-bootstrap/Image'
 
-class Sample extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      sample: {}
-    }
-  }
+import Currency from 'components/general/Currency';
 
-  componentDidMount() {
-    axios({
-      method: 'GET',
-      url: Constants.API_URL + '/samples/3'
-    })
-      .then(response => {
-        // console.log("ZT! response.data :", response.data)
-        this.setState({ sample: response.data })
-        // console.log("ZT! Sample :", this.state.sample)
+const Sample = props => (
+  <>
+    <h1>{props.sample.title}</h1>
+    <Image variant="top" src={props.sample.cover_image_url} />
 
-    })
-  }
+    <Currency value={props.sample.price} />
+    <p>В наличии: {props.sample.quantity} шт.</p>
+  </>
+)
 
-  render() {
-    return (
-      <>
-        <Head
-          title={this.state.sample.title}
-          seo_title={this.state.sample.seo_title}
-          seo_description={this.state.sample.seo_description}
-          seo_keywords={this.state.sample.seo_keywords}
-        />
-        <div className="App Site">
-          <div className="Site-content">
-            <div className="App-header">
-              <Header title={this.state.sample.title} />
-            </div>
-            <div className="App-main">
-              <div className="main_background">
-                <Details sample={this.state.sample} />
-              </div>
-            </div>
-            <div className='App-footer'>
-              <Footer />
-            </div>
-          </div>
-         </div>
-      </>
-    )
-  }
-}
+// Sample.propTypes = {
+//   sample: PropTypes.shape({
+//     title:    PropTypes.string.isRequired,
+//     price:    PropTypes.string.isRequired,
+//     quantity: PropTypes.number.isRequired
+//   })
+// }
 export default Sample

@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Layout      from 'components/demo/Layout'
 // import ItemsPage   from 'components/items/ItemsPage'
-import Sample      from 'components/demo/samples/Sample'
+import SamplePage      from 'components/demo/samples/SamplePage'
 import Page        from 'components/demo/Page'
 
 import CategoriesIndex from 'components/categories/CategoriesIndex'
@@ -60,8 +60,11 @@ const Routes = () => {
         {/* <ItemsPage items="samples" /> */}
       </Route>
       <Route exact path="/demo/samples/:id">
-        <Sample />
+        <SamplePage />
       </Route>
+      {/* <Route exact path="/demo/samples/:id" render={routeProps => (
+        <Sample {...routeProps} />
+      <Route /> */}
       <Route path="/categories">
         {/* <Categories /> */}
       </Route>
