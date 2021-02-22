@@ -1,6 +1,6 @@
 import Container      from 'react-bootstrap/Container'
 import CategoriesList from 'components/categories/CategoriesList'
-import NewsBox        from 'components/layout/SideBox'
+import SideBox        from 'components/layout/SideBox'
 
 export default function Main(props) {
   return (
@@ -8,7 +8,7 @@ export default function Main(props) {
       <Container fluid="ms" className="pt-5">
         <CategoriesList categories={props.categories} />
       </Container>
-      <NewsBox />
+      <SideBox />
     </div>
   )
 }

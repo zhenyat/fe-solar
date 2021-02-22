@@ -1,24 +1,19 @@
 import React          from 'react'
 import axios          from 'axios'
-// import singular    from 'pluralize'
-import pluralize      from 'pluralize'
-import Container      from 'react-bootstrap/Container'
-import * as Constants from 'constants/globals'
+import singular       from 'pluralize'
+import * as Constants from 'constants/globals';
 import Head           from 'components/layout/Head'
 import Header         from 'components/layout/Header'
 import Footer         from 'components/layout/Footer'
-import SideBox        from 'components/layout/SideBox'
-import Dummy from 'components/items/Dummy'
-// import ItemsList      from 'components/items/ItemsList'
+import ItemsMain      from 'components/items/ItemsMain'
 
 class ItemsPage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       items:     [],
-      itemsType: this.props.item,                           // e.g. 'category'
-      title:     pluralize(this.props.item),                // e.g. 'categories'
-      url:       Constants.API_URL + "/" + pluralize(this.props.item) // e.g. 'localhost:3001/api/v1/categories'
+      itemsType: singular(this.props.items),
+      url:       Constants.API_URL + "/" + this.props.items
     }
   }
   
@@ -28,13 +23,10 @@ class ItemsPage extends React.Component {
       url: this.state.url
     })
       .then(response => {
-        // console.log("ZT! ItemsPage - response.data: ", response.data)
+        console.log("ZT! ItemsPage - response.data: ", response.data)
         this.setState({ items: response.data })
-        console.log("ZT! ItemsPage - DidMount - items: ", this.state.items)
-      })
-      .catch(function (error) {
-        console.log("ZT! error: ", error);
-      });
+        // console.log("ZT! ItemsPage - this.state.items: ", this.state.items)
+    })
   }
 
   render() {
@@ -48,17 +40,11 @@ class ItemsPage extends React.Component {
         <div className="App Site">
           <div className="Site-content">
             <div className="App-header">
-              <Header title={this.state.title} />
+              <Header title={this.props.items} />
             </div>
             <div className="App-main">
               <div className="main_background">
-                <div className='rowC'>
-                  <Container fluid="ms" className="pt-5">
-                    {/* < ItemsList items={this.state.items} itemsType={this.state.itemsType} /> */}
-                    <Dummy items={this.state.items} itemsType={this.state.itemsType} />
-                  </Container>
-                  <SideBox />
-                </div>
+                <ItemsMain items={this.state.items} itemsType={this.state.itemsType} />
               </div>
             </div>
           </div>

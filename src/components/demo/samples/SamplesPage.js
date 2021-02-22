@@ -1,10 +1,10 @@
-import React from 'react'
-import axios from 'axios'
-import * as Constants from 'constants/globals';
-import Head                 from 'components/layout/Head'
-import Header               from 'components/layout/Header'
-import SamplesPageMain      from 'components/demo/samples/SamplesPageMain'
-import Footer from 'components/layout/Footer'
+import React           from 'react'
+import axios           from 'axios'
+import * as Constants  from 'constants/globals';
+import Head            from 'components/layout/Head'
+import Header          from 'components/layout/Header'
+import SamplesPageMain from 'components/demo/samples/SamplesPageMain'
+import Footer             from 'components/layout/Footer'
 
 class SamplesPage extends React.Component {
   constructor(props) {
