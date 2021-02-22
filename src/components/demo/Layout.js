@@ -12,7 +12,7 @@ class Layout extends Component {
         <div className="App Site">
           <div className="Site-content">
             <div className="App-header">
-              <Header />
+              <Header title="Demo Layout" />
             </div>
             <div className="App-main">
               <div className="main_background">

@@ -3,7 +3,7 @@ import axios from 'axios'
 import * as Constants from 'constants/globals';
 import Head   from 'components/layout/Head'
 import Header from 'components/layout/Header'
-import Main   from 'components/categories/Main'
+import CategoriesMain   from 'components/categories/CategoriesMain'
 import Footer from 'components/layout/Footer'
 
 class CategoriesIndex extends React.Component {
@@ -20,7 +20,7 @@ class CategoriesIndex extends React.Component {
       url: Constants.API_URL + '/categories'
     })
     .then(response => {
-      // console.log("ZT! Demo :", response.data)
+      // console.log("ZT! DidMount-response.data:", response.data)
       this.setState({ categories: response.data })
     })
 
@@ -29,7 +29,7 @@ class CategoriesIndex extends React.Component {
   render() {
     return (
       <>
-        <Head seo_title="zt-categories"/>
+        <Head seo_title="Категории товаров"/>
         <div className="App Site">
           <div className="Site-content">
             <div className="App-header">
@@ -37,7 +37,7 @@ class CategoriesIndex extends React.Component {
             </div>
             <div className="App-main">
               <div className="main_background">
-                <Main categories={this.state.categories} />
+                <CategoriesMain categories={this.state.categories} />
               </div>
             </div>
           </div>

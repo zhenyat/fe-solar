@@ -8,7 +8,7 @@ const SamplesList = props => (
   <Row>
     {props.samples.map(function(sample){
       return (
-        // <Col>
+        // <Col md={3}>
           <SampleCard key={sample.id} sample={sample} />
         // </Col>
       )

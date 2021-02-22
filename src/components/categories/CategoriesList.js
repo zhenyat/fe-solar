@@ -8,8 +8,8 @@ const CategoriesList = props => (
   <Row>
     {props.categories.map(function(category){
       return (
-        <Col md={3}>
-          <CategoryCard key={category.id} category={category} />
+        <Col md={3} key={category.id}>
+          <CategoryCard category={category} />
         </Col>
       )
     })}
