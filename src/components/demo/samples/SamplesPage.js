@@ -1,10 +1,10 @@
-import React           from 'react'
-import axios           from 'axios'
-import * as Constants  from 'constants/globals';
-import Head            from 'components/layout/Head'
-import Header          from 'components/layout/Header'
-import SamplesPageMain from 'components/demo/samples/SamplesPageMain'
-import Footer          from 'components/layout/Footer'
+import React          from 'react'
+import axios          from 'axios'
+import * as Constants from 'constants/globals';
+import Head           from 'components/layout/Head'
+import Header         from 'components/layout/Header'
+import SamplesMain    from 'components/demo/samples/SamplesMain'
+import Footer         from 'components/layout/Footer'
 
 class SamplesPage extends React.Component {
   constructor(props) {
@@ -37,7 +37,7 @@ class SamplesPage extends React.Component {
             </div>
             <div className="App-main">
               <div className="main_background">
-                <SamplesPageMain samples={this.state.samples} />
+                <SamplesMain samples={this.state.samples} />
               </div>
             </div>
           </div>

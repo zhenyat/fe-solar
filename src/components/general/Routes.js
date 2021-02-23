@@ -1,15 +1,16 @@
-import React from 'react'
+// import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Layout      from 'components/demo/Layout'
-// import ItemsPage   from 'components/items/ItemsPage'
-import SamplePage      from 'components/demo/samples/SamplePage'
-import Page        from 'components/demo/Page'
 
 import CategoriesIndex from 'components/categories/CategoriesIndex'
-import SamplesPage from 'components/demo/samples/SamplesPage'
+import CategoryPage    from 'components/categories/CategoryPage'
 
+import Layout from 'components/demo/Layout'
+import SamplesPage     from 'components/demo/samples/SamplesPage'
+import SamplePage      from 'components/demo/samples/SamplePage'
+import Page            from 'components/demo/Page'
+
+// import ItemsPage   from 'components/items/ItemsPage'
 // import Category   from 'components/categories/Show'
-// import Home       from 'components/pages/Home';
 // import About      from 'components/pages//About';
 // import Contacts   from 'components/pages//Contacts';
 // import Notes      from 'components/pages//Notes';
@@ -28,8 +29,11 @@ const Routes = () => {
         <CategoriesIndex />
       </Route>
       <Route exact path="/categories/:id">
-        {/* <Category/> */}
+        <CategoryPage />
       </Route>
+      {/* <Route exact path="/categories/:id" render={routeProps => (
+        <CategoryPageAsClass {...routeProps} />
+      )} /> */}
       <Route path="/about">
         {/* <About /> */}
       </Route>
@@ -63,8 +67,9 @@ const Routes = () => {
         <SamplePage />
       </Route>
       {/* <Route exact path="/demo/samples/:id" render={routeProps => (
-        <Sample {...routeProps} />
-      <Route /> */}
+        <SamplePage {...routeProps} />
+        )} /> */}
+      <Route />
       <Route path="/categories">
         {/* <Categories /> */}
       </Route>
