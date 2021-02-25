@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import CategoriesIndex from 'components/categories/CategoriesIndex'
 import CategoryPage    from 'components/categories/CategoryPage'
 
+// import ProductsPage    from 'components/products/ProductsPage'
+
+
 import Layout from 'components/demo/Layout'
 import SamplesPage     from 'components/demo/samples/SamplesPage'
 import SamplePage      from 'components/demo/samples/SamplePage'
